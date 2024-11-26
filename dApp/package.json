@@ -1,6 +1,7 @@
 {
-  "name": "ReplitReactjsProject",
-  "version": "0.0.1",
+  "name": "Newebify",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,8 +12,10 @@
     "@types/react-dom": "^17.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "vite": "^3.0.4",
     "ethers": "^5.4.4",
     "@vitejs/plugin-react": "^2.0.0"
+  },
+  "devDependencies": {
+    "vite": "^3.0.4"
   }
 }

@@ -7,6 +7,19 @@ const main = async () => {
   await waveContract.deployed();
 
   console.log("WavePortal address: ", waveContract.address);
+  
+  // Save the contract address to a file
+  const fs = require("fs");
+  const contractsDir = __dirname + "/../contractData";
+  
+  if (!fs.existsSync(contractsDir)) {
+    fs.mkdirSync(contractsDir);
+  }
+
+  fs.writeFileSync(
+    contractsDir + "/contract-address.json",
+    JSON.stringify({ WavePortal: waveContract.address }, undefined, 2)
+  );
 };
 
 const runMain = async () => {
